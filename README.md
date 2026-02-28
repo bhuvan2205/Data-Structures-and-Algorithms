@@ -116,3 +116,13 @@ To find whether the given value exists in the data.
 Iterate over the data and check each value for a match. If the value matches, return `true` (or the index). Else, return `false` (or `-1`).
 
 - **Time Complexity**: \(O(n)\)
+
+### [Binary Search](Searching%20Algorithms/Binary%20Search)
+
+1. Works using the **divide and conquer** method. To implement this we need `start` (0), `end` (length of the data) and `middle` \((left + right) / 2\).
+2. Compare whether the middle value matches the target; if yes, return `true` (or the index).
+3. If not, check if the target value is **greater** than the middle value; if yes, move `start` to `middle` and calculate the middle again.
+4. Else (the target is **less** than the middle value), move `end` to `middle` and calculate the middle again.
+5. Repeat the process until `start` and `end` meet; if there is still no match, return `false` (or `-1`).
+
+- **Time Complexity**: \(O(\log n)\)
