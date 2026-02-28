@@ -53,10 +53,10 @@ To describe the **run time complexity** of the function — the relation between
 
 **Examples:**
 
-| Description        | Notation |
-|--------------------|----------|
-| f(n) is linear     | O(n)     |
-| f(n) is constant   | O(1)     |
+| Description      | Notation |
+| ---------------- | -------- |
+| f(n) is linear   | O(n)     |
+| f(n) is constant | O(1)     |
 
 ![Big O Notation – Time vs Input Size](assets/big-o-notation.png)
 
@@ -70,10 +70,10 @@ To describe the **space (memory) complexity** of the function — the relation b
 
 **Rules of thumb:**
 
-| Type                          | Space  |
-|-------------------------------|--------|
-| Booleans, numbers, null, undefined | O(1)   |
-| Strings, Arrays, Objects      | O(n)   |
+| Type                               | Space |
+| ---------------------------------- | ----- |
+| Booleans, numbers, null, undefined | O(1)  |
+| Strings, Arrays, Objects           | O(n)  |
 
 ---
 
@@ -92,3 +92,27 @@ log₂(8) = 3     ⟺     2³ = 8
 ```
 log₂(value) = exponent     ⟺     2^exponent = value
 ```
+
+---
+
+## Searching Algorithms
+
+To find whether the given value exists in the data.
+
+**Most common ways to implement:**
+
+- **[Linear Search](Searching%20Algorithms/Linear%20Search)**
+- **Binary Search**
+
+**Inbuilt JS methods that use searching algorithms:**
+
+- **indexOf()**
+- **includes()**
+- **find()**
+- **findIndex()**
+
+### [Linear Search](Searching%20Algorithms/Linear%20Search)
+
+Iterate over the data and check each value for a match. If the value matches, return `true` (or the index). Else, return `false` (or `-1`).
+
+- **Time Complexity**: \(O(n)\)
