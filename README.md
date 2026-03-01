@@ -44,6 +44,7 @@ Best approach to solve the problem or optimal solution.
   Makes the locally optimal choice at each step with the hope of finding a global optimum, often used for optimization problems.
 - **[Recursion](Common%20Patterns/Recursion)**  
   Solves a problem by having a function call itself with smaller inputs until reaching a base case, then combining the results.
+  Inbuilt JS functions like `JSON.parse` / `JSON.stringify` also use recursion under the hood.
 
 ---
 
@@ -102,7 +103,7 @@ To find whether the given value exists in the data.
 **Most common ways to implement:**
 
 - **[Linear Search](Searching%20Algorithms/Linear%20Search)**
-- **Binary Search**
+- **[Binary Search](Searching%20Algorithms/Binary%20Search)**
 
 **Inbuilt JS methods that use searching algorithms:**
 
@@ -126,3 +127,23 @@ Iterate over the data and check each value for a match. If the value matches, re
 5. Repeat the process until `start` and `end` meet; if there is still no match, return `false` (or `-1`).
 
 - **Time Complexity**: \(O(\log n)\)
+
+---
+
+## Sorting Algorithms
+
+To sort the data in a particular order (ascending/descending).
+
+JS engines use various approaches to handle sorting. **V8** (Chrome, Node.js, Edge, etc.) typically uses **Timsort** for typical arrays, which is a hybrid algorithm derived from **Merge Sort** and **Insertion Sort**. **Firefox's** engine uses a **Merge Sort**.
+
+By default, if no comparison function is provided, the `sort()` method converts array elements into strings and sorts them based on their UTF-16 code unit values, which often leads to incorrect results for numbers.
+
+**Most common ways to implement:**
+
+- Quick Sort
+- Radix Sort
+- Heap Sort
+- Merge Sort
+- Bubble Sort
+- Insertion Sort
+- Selection Sort
