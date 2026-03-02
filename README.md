@@ -120,13 +120,20 @@ Iterate over the data and check each value for a match. If the value matches, re
 
 ### [Binary Search](Searching%20Algorithms/Binary%20Search)
 
-1. Works using the **divide and conquer** method. To implement this we need `start` (0), `end` (length of the data) and `middle` \((left + right) / 2\).
+1. Working using the **divide and conquer** method. To implement this we need `start` (0), `end` (length of the data) and `middle` \((left + right) / 2\).
 2. Compare whether the middle value matches the target; if yes, return `true` (or the index).
-3. If not, check if the target value is **greater** than the middle value; if yes, move `start` to `middle` and calculate the middle again.
-4. Else (the target is **less** than the middle value), move `end` to `middle` and calculate the middle again.
-5. Repeat the process until `start` and `end` meet; if there is still no match, return `false` (or `-1`).
+3. If not, check if the target value is **greater** than the middle value. If yes, move `start` to `middle` and calculate the middle again.
+4. Else, the middle is **less** than the target value; move `end` to `middle` and calculate the middle again.
+5. Repeat the process until `start` and `end` are equal. If there is still no match, return `false` (or `-1`).
 
 - **Time Complexity**: \(O(\log n)\)
+
+### [Naive String (Sub-string) Search](Searching%20Algorithms/Naive%20Search)
+
+Iterate over the data and use another iteration to find the match.  
+Create a variable to track the count; if at any point the current characters don’t match, break the inner loop. Else, if the count and found length match, increment the count. At the end, return the count value.
+
+- **Time Complexity**: \(O(n^2)\)
 
 ---
 
@@ -147,3 +154,12 @@ By default, if no comparison function is provided, the `sort()` method converts 
 - Bubble Sort
 - Insertion Sort
 - Selection Sort
+
+### [Bubble Sort](Sorting%20Algorithms/Bubble%20Sort)
+
+Iterate over the data, and use another iteration to compare the current value and the next value. If the current value is greater than the next value, swap the values.
+
+**Optimization technique:**  
+If it’s almost sorted data, we can check if the sorting is done (no swapping) from the previous iteration. If yes, break the loop and return the sorted array.
+
+- **Time Complexity**: \(O(n^2)\)
