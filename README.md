@@ -159,7 +159,7 @@ By default, if no comparison function is provided, the `sort()` method converts 
 
 Iterate over the data, and use another iteration to compare the current value and the next value. If the current value is greater than the next value, swap the values.
 
+- **Time Complexity**: \(O(n^2)\)
+
 **Optimization technique:**  
 If it’s almost sorted data, we can check if the sorting is done (no swapping) from the previous iteration. If yes, break the loop and return the sorted array.
-
-- **Time Complexity**: \(O(n^2)\)

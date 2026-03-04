@@ -4,15 +4,21 @@ const swap = (array, index1, index2) => {
 
 const bubbleSort = (array) => {
   const len = array.length;
-  for (let i = 0; i < len; i++) {
-    for (let j = 0; j < len - 1; j++) {
+
+  for (let i = len; i > 0; i--) {
+    let noSwap = true;
+    for (let j = 0; j < i - 1; j++) {
       if (array[j] > array[j + 1]) {
         swap(array, j, j + 1);
       }
+      noSwap = false;
+    }
+    if (noSwap) {
+      break;
     }
   }
 
   return array;
 };
 
-console.log(bubbleSort([34, 23, 47, 54, 67, 21]));
+console.log(bubbleSort([23, 65, 82, 34, 15, 43]));
