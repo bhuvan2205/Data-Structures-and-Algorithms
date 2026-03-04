@@ -163,3 +163,12 @@ Iterate over the data, and use another iteration to compare the current value an
 
 **Optimization technique:**  
 If it’s almost sorted data, we can check if the sorting is done (no swapping) from the previous iteration. If yes, break the loop and return the sorted array.
+
+### [Selection Sort](Sorting%20Algorithms/Selection%20Sort)
+
+Unlike Bubble Sort, here we find the smallest element in the unsorted portion and swap it into its correct position. Iterate over the data, and for each position use another iteration to compare the current value with the smallest value found so far. If the smallest value is greater than the current value, update the smallest element to the current value and, after the inner loop, swap the values.
+
+- **Time Complexity**: \(O(n^2)\)
+
+**Optimization technique:**  
+Swap only if the current element and the smallest element are different, and then return the sorted array.
