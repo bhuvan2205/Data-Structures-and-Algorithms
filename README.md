@@ -172,3 +172,9 @@ Unlike Bubble Sort, here we find the smallest element in the unsorted portion an
 
 **Optimization technique:**  
 Swap only if the current element and the smallest element are different, and then return the sorted array.
+
+### [Insertion Sort](Sorting%20Algorithms/Insertion%20Sort)
+
+Iterate over the data to go through each value. Store the pointer (`arr[i]`) value to update later, and use another iteration to re-arrange the values from index `i - 1` down to `0`. At the end of each iteration, update `arr[j + 1]` with the pointer to place the smallest element at the beginning. If the current value (`arr[j]`) is less than the pointer, break the loop and return the array.
+
+- **Time Complexity**: \(O(n^2)\)
