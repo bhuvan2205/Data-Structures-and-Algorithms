@@ -178,3 +178,21 @@ Swap only if the current element and the smallest element are different, and the
 Iterate over the data to go through each value. Store the pointer (`arr[i]`) value to update later, and use another iteration to re-arrange the values from index `i - 1` down to `0`. At the end of each iteration, update `arr[j + 1]` with the pointer to place the smallest element at the beginning. If the current value (`arr[j]`) is less than the pointer, break the loop and return the array.
 
 - **Time Complexity**: \(O(n^2)\)
+
+### [Merge Sort](Sorting%20Algorithms/Merge%20Sort)
+
+Assuming a single element in an array is always sorted, Merge Sort builds on that fact. It combines three steps: **splitting**, **sorting**, and **merging**. The first step is to understand how to merge two sorted arrays.
+
+**Merge two sorted arrays:**
+
+1. Create a new (result) array to store the sorted elements. Compare the first element from both arrays.
+2. If the first array’s element is greater than the second array’s element, push the second array’s element to the result array and move to the next position in the second array.
+3. If the first array’s element is less than the second array’s element, push the first array’s element to the result array and move to the next position in the first array.
+4. Repeat until a position is greater than the array length.
+5. Push the remaining sorted elements into the result array and return the result array.
+
+**Implementation of Merge Sort:**
+
+Find the middle position to split the array into two halves and store them in `left` and `right`. Recursively call merge sort until the length of the array is less than or equal to 1. Call the merge function with the two halves (`left`, `right`) to produce the sorted array and return it.
+
+- **Time Complexity**: \(O(n \log n)\)
