@@ -4,17 +4,15 @@ const swap = (array, index1, index2) => {
 
 const insertionSort = (array) => {
   const len = array.length;
-  for (let i = 1; i < len; i++) {
+  for (var i = 1; i < len; i++) {
     let currentValue = array[i];
-    for (let j = i - 1; j >= 0 && array[j] > currentValue; j--) {
-      if (array[j] > currentValue) {
-        array[j + 1] = array[j];
-      }
-      array[j + 1] = currentValue;
+    for (var j = i - 1; j >= 0 && array[j] > currentValue; j--) {
+      array[j + 1] = array[j];
     }
+    array[j + 1] = currentValue;
   }
 
   return array;
 };
 
-console.log(insertionSort([300, 600, 100, 210]));
+console.log(insertionSort([300, 400, 100, 210]));
