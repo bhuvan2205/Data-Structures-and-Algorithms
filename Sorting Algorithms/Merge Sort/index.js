@@ -31,15 +31,12 @@ const merge = (array1, array2) => {
 };
 
 const mergeSort = (array) => {
-  console.log("Array", array);
   if (array.length <= 1) return array;
 
   const middle = Math.floor(array.length / 2);
 
   let left = mergeSort(array.slice(0, middle));
   let right = mergeSort(array.slice(middle));
-
-  console.log("left", left, "right", right);
 
   return merge(left, right);
 };

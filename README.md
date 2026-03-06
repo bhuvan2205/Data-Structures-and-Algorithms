@@ -196,3 +196,19 @@ Assuming a single element in an array is always sorted, Merge Sort builds on tha
 Find the middle position to split the array into two halves and store them in `left` and `right`. Recursively call merge sort until the length of the array is less than or equal to 1. Call the merge function with the two halves (`left`, `right`) to produce the sorted array and return it.
 
 - **Time Complexity**: \(O(n \log n)\)
+
+### [Quick Sort](Sorting%20Algorithms/Quick%20Sort)
+
+Assuming a single element inside the array is always sorted, Quick Sort works with this fact.
+
+**Pivot index:**
+
+1. Create the pivot index as `start` and iterate over the array using a loop.
+2. If the pivot element is greater than the current element, swap the elements and increase the pivot index by 1.
+3. After the iteration completes, swap the pivot and the `start` element of the array.
+
+**Implementation of Quick Sort:**
+
+Find the pivot index using the above function. Then call quick sort for the left side and right side separately. Repeat the process while `left` is smaller than `right`. Finally, return the sorted array.
+
+- **Time Complexity**: \(O(n \log n)\) on average
