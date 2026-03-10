@@ -212,3 +212,19 @@ Assuming a single element inside the array is always sorted, Quick Sort works wi
 Find the pivot index using the above function. Then call quick sort for the left side and right side separately. Repeat the process while `left` is smaller than `right`. Finally, return the sorted array.
 
 - **Time Complexity**: \(O(n \log n)\) on average
+
+### [Radix Sort](Sorting%20Algorithms/Radix%20Sort)
+
+Unlike many other sorts, Radix Sort does not compare pairs of numbers. Instead, it relies on the fact that two- or three-digit numbers are always greater than single-digit numbers, and processes numbers digit by digit.
+
+**Get digit count:**  
+Return the number of digits of a number by converting it to a string and using the `length` property.
+
+**Get digit value:**  
+Return the digit at a specific position if it exists, otherwise return `0`.
+
+**Implementation of Radix Sort:**
+
+Get the maximum digit count from the array. For each digit position, create buckets (0–9) to store elements. Iterate over the elements and push each number into the corresponding bucket based on its current digit. Concatenate the buckets back into the array, and repeat for all digit positions. Finally, return the sorted array.
+
+- **Time Complexity**: \(O(n + k)\)
