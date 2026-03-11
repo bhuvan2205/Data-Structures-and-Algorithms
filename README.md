@@ -2,6 +2,31 @@
 
 ---
 
+## Data Structures
+
+A data structure is a specialized format for organizing, storing, and managing data in a computer so that it can be used efficiently.
+
+![Data Structures](assets/ds.jpg)
+
+### Why are Data Structures Important?
+
+- **Efficiency**: They enable faster storage, retrieval, and processing of data, which is especially important for large, complex datasets.
+- **Performance**: Appropriate data structures optimize operations, directly impacting a program's speed and performance.
+- **Organization**: They provide a logical framework for managing information, making programs easier to understand, modify, and maintain.
+- **Algorithm Design**: Data structures are the foundation for algorithms; the right structure helps in designing efficient algorithms to solve complex problems.
+
+### Types of Data Structures
+
+- **Linear Data Structures**: Elements are arranged in a sequential, linear order. Examples include Arrays (contiguous memory, fast access), Linked Lists (pointers for efficient insertion), Stacks (LIFO), and Queues (FIFO).
+- **Non-Linear Data Structures**: Data elements are not arranged sequentially, forming complex relationships. Examples include Trees (hierarchical), Graphs (networked), and Hash Tables (key-value pairs for fast lookup).
+
+### Common Operations on Data Structures
+
+- **Insertion & Deletion**: Adding or removing data elements.
+- **Traversal**: Accessing every element.
+- **Searching**: Locating specific data.
+- **Sorting**: Ordering data elements.
+
 ## Algorithm
 
 A **process or set of steps** to solve a certain problem.
