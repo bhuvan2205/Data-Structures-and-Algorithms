@@ -27,6 +27,26 @@ A data structure is a specialized format for organizing, storing, and managing d
 - **Searching**: Locating specific data.
 - **Sorting**: Ordering data elements.
 
+### [Singly Linked Lists](Data%20Structures/LinkedList)
+
+A singly linked list is a fundamental linear data structure where elements, called **nodes**, are linked together in a sequence using pointers. Each node contains two parts: a data field and a pointer (or reference) to the next node in the list.
+
+**Structure and key features:**
+
+- **Nodes**: The basic building blocks of the list. Each node holds a data value and a pointer named `next` which stores the memory address of the subsequent node.
+- **Head**: A special pointer that points to the first node in the list. It is the entry point used to access and traverse the list.
+- **Tail/End**: The last node in the list, identifiable because its `next` pointer is `null`, indicating the end of the sequence.
+- **Non-contiguous memory**: Unlike arrays, the nodes of a singly linked list are not stored in adjacent memory locations. Instead, they can be located anywhere in memory, and the pointers are used to maintain their logical order.
+- **Unidirectional traversal**: Data can only be read or accessed in one direction, starting from the head and following the `next` pointers sequentially to the tail.
+
+**Common operations:**  
+Primary operations include traversing the list, inserting or deleting nodes at the beginning, end, or specific positions, and searching for data.
+
+**Advantages and disadvantages:**
+
+- **Pros**: Dynamic memory allocation, efficient insertions/deletions at the beginning, and flexibility in size.
+- **Cons**: Slower access by index, memory overhead for pointers, and the inability to traverse backward.
+
 ## Algorithm
 
 A **process or set of steps** to solve a certain problem.
