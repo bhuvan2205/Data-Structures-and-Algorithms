@@ -47,6 +47,28 @@ Primary operations include traversing the list, inserting or deleting nodes at t
 - **Pros**: Dynamic memory allocation, efficient insertions/deletions at the beginning, and flexibility in size.
 - **Cons**: Slower access by index, memory overhead for pointers, and the inability to traverse backward.
 
+**Time complexity of operations**
+
+| Operation                      | Time Complexity | Explanation                                                                                      |
+| ------------------------------ | --------------- | ------------------------------------------------------------------------------------------------ |
+| Access                         | \(O(n)\)        | Elements must be accessed by traversing from the head; there is no random access like in arrays. |
+| Search                         | \(O(n)\)        | In the worst case, the entire list must be traversed to find a specific value.                   |
+| Insertion at Beginning         | \(O(1)\)        | Only the head pointer and the new node's pointer need to be updated.                             |
+| Insertion at End               | \(O(n)\)        | Traversal to the last node is required (unless a tail pointer is maintained).                    |
+| Insertion at Specific Position | \(O(n)\)        | Traversal to the node just before the desired position is required.                              |
+| Deletion at Beginning          | \(O(1)\)        | Only the head pointer needs to be updated to the next node.                                      |
+| Deletion at End                | \(O(n)\)        | Traversal to the second-to-last node is needed to update its pointer to `null`.                  |
+| Deletion at Specific Position  | \(O(n)\)        | Traversal to the node just before the one to be deleted is required to update pointers.          |
+
+_Note:_ Insertion and deletion take \(O(1)\) time only when you already have a pointer to the preceding node.
+
+**Applications**
+
+- Implementing stacks and queues due to efficient insertion/deletion at one or both ends.
+- Memory management in systems programming to track free memory blocks.
+- Implementing undo functionality in applications.
+- Representing polynomial expressions and sparse matrices efficiently.
+
 ### [Doubly Linked Lists](Data%20Structures/Doubly%20LinkedList)
 
 A doubly linked list is a type of linked list in which each node contains a pointer to the next node and a pointer to the previous node in the sequence. This allows efficient traversal and manipulation in both forward and backward directions.
