@@ -112,6 +112,31 @@ Doubly linked lists are used where bidirectional movement is useful:
 - **Undo/Redo**: In text editors and design tools to revert or re-apply changes.
 - **Music playlists**: Moving to the next or previous track easily.
 
+### [Stack](Data%20Structures/Stack)
+
+A stack is a linear data structure that follows the **Last-In, First-Out (LIFO)** principle: the last element added is the first one to be removed.
+
+**Implementation**
+
+Stacks can be implemented using:
+
+- **Arrays**: A fixed-size array is simple and memory-efficient but has limited capacity, which can lead to stack overflow.
+- **Linked lists**: Dynamic memory allows the stack to grow or shrink as needed, avoiding fixed-size limits. This uses slightly more memory due to pointers in each node.
+
+**Key operations**
+
+Primary operations are typically \(O(1)\):
+
+- **Push**: Add a new element to the top of the stack.
+- **Pop**: Remove and return the top element.
+- **Peek (or Top)**: Return the value of the top element without removing it.
+
+**Applications**
+
+- **Function call management**: Languages use a call stack to track active function calls and local variables.
+- **Undo functionality**: Text editors and other software use a stack to store action history; "undo" pops the most recent action.
+- **Browser history**: The "back" button uses a stack to navigate to previously visited pages.
+
 ## Algorithm
 
 A **process or set of steps** to solve a certain problem.
