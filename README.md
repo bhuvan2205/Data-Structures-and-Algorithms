@@ -47,6 +47,49 @@ Primary operations include traversing the list, inserting or deleting nodes at t
 - **Pros**: Dynamic memory allocation, efficient insertions/deletions at the beginning, and flexibility in size.
 - **Cons**: Slower access by index, memory overhead for pointers, and the inability to traverse backward.
 
+### [Doubly Linked Lists](Data%20Structures/Doubly%20LinkedList)
+
+A doubly linked list is a type of linked list in which each node contains a pointer to the next node and a pointer to the previous node in the sequence. This allows efficient traversal and manipulation in both forward and backward directions.
+
+**Structure**
+
+Each node is composed of three parts:
+
+- **Data**: The value or information stored in the node.
+- **Next pointer**: A reference to the following node. For the last node, this is typically `null`.
+- **Previous pointer**: A reference to the preceding node. For the first node (head), this is typically `null`.
+
+**Advantages and disadvantages**
+
+- **Advantages**
+  - **Bidirectional traversal**: Move forward and backward easily.
+  - **Efficient deletion**: A node can be deleted in \(O(1)\) time when a pointer to it is available, without traversing from the head to find the previous node.
+  - **Flexible insertion**: Easier insertion and deletion at both ends due to maintaining head and tail pointers.
+- **Disadvantages**
+  - **Increased memory**: Each node has an extra pointer (previous), using more memory than a singly linked list.
+  - **More complex implementation**: Operations must update two pointers per node, which increases the chance of errors.
+  - **Higher overhead**: Extra pointer updates can add some overhead compared to singly linked lists.
+
+**Time complexity of operations**
+
+| Operation | Time Complexity      | Notes                                                                                                                                         |
+| --------- | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| Access    | \(O(n)\)             | Random access by index is not supported; traverse from head or tail.                                                                          |
+| Search    | \(O(n)\)             | Worst case requires traversing the whole list.                                                                                                |
+| Traversal | \(O(n)\)             | Visiting every node is proportional to the number of nodes.                                                                                   |
+| Insertion | \(O(1)\) or \(O(n)\) | \(O(1)\) at beginning or end (with tail pointer) or when the insertion point is known; \(O(n)\) when the position must be found by traversal. |
+| Deletion  | \(O(1)\) or \(O(n)\) | \(O(1)\) for first/last node or when a pointer to the node is given; \(O(n)\) when the node must be found by traversal.                       |
+
+A key advantage of a doubly linked list is deleting a node in \(O(1)\) time when a pointer to that node is known, since both previous and next nodes are directly accessible. In a singly linked list, finding the preceding node requires traversal and is \(O(n)\).
+
+**Real-world applications**
+
+Doubly linked lists are used where bidirectional movement is useful:
+
+- **Browser history**: Forward and backward navigation between pages.
+- **Undo/Redo**: In text editors and design tools to revert or re-apply changes.
+- **Music playlists**: Moving to the next or previous track easily.
+
 ## Algorithm
 
 A **process or set of steps** to solve a certain problem.
