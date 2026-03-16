@@ -137,6 +137,48 @@ Primary operations are typically \(O(1)\):
 - **Undo functionality**: Text editors and other software use a stack to store action history; "undo" pops the most recent action.
 - **Browser history**: The "back" button uses a stack to navigate to previously visited pages.
 
+### [Queue](Data%20Structures/Queue)
+
+A queue is a linear data structure that follows the **First-In, First-Out (FIFO)** principle — similar to people waiting in a line for a service. The first element added to the queue is the first one to be removed.
+
+**Structure**
+
+A queue has two main ends:
+
+- **Front (Head)**: The end of the queue from which elements are removed or accessed.
+- **Rear (Tail/Back)**: The end where new elements are inserted.
+
+**Key Concept**
+
+- **FIFO Principle (First-In, First-Out)**  
+  This guarantees that elements are processed in the exact order they were added, maintaining sequence and fairness.
+
+**Implementation**
+
+Queues can be implemented using:
+
+- **Arrays**: Simple and easy to implement but may require shifting elements if not implemented as a circular queue.
+- **Linked Lists**: Dynamic in size and efficient for insertion and deletion when both head and tail pointers are maintained.
+
+**Time Complexity of Operations**
+
+| Operation | Time Complexity | Explanation |
+|-----------|----------------|-------------|
+| Enqueue   | \(O(1)\) | Insert element at the rear of the queue. |
+| Dequeue   | \(O(1)\) | Remove element from the front of the queue. |
+| Peek      | \(O(1)\) | Access the front element without removing it. |
+| Search    | \(O(n)\) | May require traversing the entire queue to find an element. |
+
+**Applications**
+
+Queues are widely used in many real-world systems:
+
+- **Operating Systems**: Managing processes for CPU scheduling and handling interrupts (e.g., Round Robin scheduling).
+- **Printers / Shared Resources**: Storing print jobs or requests to a shared device and processing them in order of arrival.
+- **Networking**: Buffering data packets in routers and switches to manage network traffic.
+- **Graph Algorithms**: Used in Breadth-First Search (BFS) traversal.
+- **Task Scheduling**: Handling asynchronous operations in event-driven systems.
+
 ## Algorithm
 
 A **process or set of steps** to solve a certain problem.
