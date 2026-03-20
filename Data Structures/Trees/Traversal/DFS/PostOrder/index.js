@@ -40,23 +40,22 @@ class Tree {
     }
   }
 
-  BFS() {
-    let queue = [];
+  DFSPostOrder() {
     let data = [];
 
-    queue.push(this.root);
-    while (queue.length) {
-      const current = queue.shift();
-      data.push(current.value);
-
-      if (current.left) {
-        queue.push(current.left);
+    const traverse = (node) => {
+      if (node.left) {
+        traverse(node.left);
       }
-      if (current.right) {
-        queue.push(current.right);
-      }
-    }
 
+      if (node.right) {
+        traverse(node.right);
+      }
+
+      data.push(node.value);
+    };
+
+    traverse(this.root);
     return data;
   }
 }
@@ -71,4 +70,4 @@ console.log(tree.insert(2));
 console.log(tree.insert(20));
 console.log(tree.insert(12));
 console.log(tree.insert(7));
-console.log(tree.BFS());
+console.log(tree.DFSPostOrder());
