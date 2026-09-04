@@ -162,12 +162,12 @@ Queues can be implemented using:
 
 **Time Complexity of Operations**
 
-| Operation | Time Complexity | Explanation |
-|-----------|----------------|-------------|
-| Enqueue   | \(O(1)\) | Insert element at the rear of the queue. |
-| Dequeue   | \(O(1)\) | Remove element from the front of the queue. |
-| Peek      | \(O(1)\) | Access the front element without removing it. |
-| Search    | \(O(n)\) | May require traversing the entire queue to find an element. |
+| Operation | Time Complexity | Explanation                                                 |
+| --------- | --------------- | ----------------------------------------------------------- |
+| Enqueue   | \(O(1)\)        | Insert element at the rear of the queue.                    |
+| Dequeue   | \(O(1)\)        | Remove element from the front of the queue.                 |
+| Peek      | \(O(1)\)        | Access the front element without removing it.               |
+| Search    | \(O(n)\)        | May require traversing the entire queue to find an element. |
 
 **Applications**
 
@@ -178,6 +178,90 @@ Queues are widely used in many real-world systems:
 - **Networking**: Buffering data packets in routers and switches to manage network traffic.
 - **Graph Algorithms**: Used in Breadth-First Search (BFS) traversal.
 - **Task Scheduling**: Handling asynchronous operations in event-driven systems.
+
+### [Trees](Data%20Structures/Trees)
+
+A tree is a non-linear, hierarchical data structure consisting of nodes connected by edges. Unlike linear structures like arrays or linked lists, trees represent data in a branching, top-down fashion.
+
+**Key terminologies**
+
+- **Root and node types**: The topmost node is the root. Nodes are connected by edges. Internal nodes have children; leaf nodes mark the end of branches.
+- **Structure measurements**: Height is the longest path from a node to a leaf. Depth is a node's distance from the root.
+
+**Common types of trees**
+
+- **Binary trees and BSTs**: A binary tree allows at most two children per node. A [Binary Search Tree (BST)](Data%20Structures/Trees/Binary%20Search%20Trees) organizes data so that smaller values are on the left and larger values are on the right.
+- **Balanced trees**: Structures like AVL and Red-Black trees keep height differences small so operations stay efficient.
+- **Specialized trees**: B-trees are used in databases. Heaps (max/min) support priority queues. Tries are used for prefix searches.
+
+**Core operations**
+
+- **Traversals**: Visit nodes in a defined order — in-order, pre-order, post-order, or level-order.
+- **Manipulation**: Search, insert, and delete. Efficiency depends heavily on whether the tree stays balanced.
+
+**Applications**
+
+- **File systems**: Folders and files form a tree. The drive or home directory is the root; folders are branches; files are often leaves.
+- **Organizational charts**: A company hierarchy with the CEO at the top, then VPs, managers, and employees.
+- **Family trees**: Ancestors and descendants; you are a child of your parents, who are children of your grandparents.
+- **HTML DOM**: A web page is a tree. The `<html>` tag is the root, with `<head>` and `<body>` branches holding elements such as `<div>` or `<h1>`.
+- **Routing tables**: Routers use tree structures (such as tries) to decide where to send traffic based on IP addresses.
+- **Decision making**: Decision trees in AI and game design (for example chess) evaluate possible moves and outcomes.
+
+#### Binary Search Tree Structure
+
+In a BST, for any node every value in the left subtree is smaller and every value in the right subtree is larger. The diagram below has root **40**, with left subtree **30 / 25 / 35** and right subtree **50 / 45 / 60**.
+
+![Binary Search Tree](assets/binary-search-tree.png)
+
+**Time complexity of BST operations**
+
+| Operation | Best Case     | Average Case  | Worst Case |
+| --------- | ------------- | ------------- | ---------- |
+| Search    | \(O(1)\)      | \(O(\log n)\) | \(O(n)\)   |
+| Insert    | \(O(\log n)\) | \(O(\log n)\) | \(O(n)\)   |
+| Delete    | \(O(\log n)\) | \(O(\log n)\) | \(O(n)\)   |
+| Traversal | \(O(n)\)      | \(O(n)\)      | \(O(n)\)   |
+
+_Note:_ Best-case search is \(O(1)\) when the target is the root. Worst-case \(O(n)\) search, insert, and delete occur on a skewed (unbalanced) tree. AVL and Red-Black trees keep height \(O(\log n)\) so those operations stay logarithmic.
+
+#### [BFS](Data%20Structures/Trees/Traversal/BFS)
+
+Breadth-First Search (BFS), also known as **level-order traversal**, visits nodes level by level, starting from the root and moving left to right at each depth.
+
+**Core algorithm**
+
+BFS is typically implemented iteratively with a **queue** (FIFO):
+
+1. **Initialize**: Enqueue the root.
+2. **Loop** while the queue is not empty:
+   - **Dequeue** the front node.
+   - **Visit** it (for example, print its value).
+   - **Enqueue** its immediate children (left, then right).
+3. **Terminate** when the queue is empty.
+
+**Key characteristics**
+
+- **Order**: Explores all nodes at the current depth (siblings) before going deeper.
+- **Time complexity**: \(O(n)\), where \(n\) is the number of nodes; each node is visited once.
+- **Space complexity**: \(O(W)\), where \(W\) is the maximum width of the tree. In a complete binary tree the queue can hold up to about half the nodes (the last level), which is \(O(n)\).
+
+#### [DFS](Data%20Structures/Trees/Traversal/DFS)
+
+Depth-First Search (DFS) explores a tree by going as far as possible down one branch before backtracking. Unlike BFS, it prioritizes reaching leaves first.
+
+**Types of DFS traversals**
+
+Defined by when the current node is visited relative to its children:
+
+- **[Pre-order](Data%20Structures/Trees/Traversal/DFS/PreOrder) (Root → Left → Right)**: Visit the current node first, then the left subtree, then the right subtree. Useful for copying a tree or generating prefix expressions.
+- **[In-order](Data%20Structures/Trees/Traversal/DFS/InOrder) (Left → Root → Right)**: Visit the left subtree, then the current node, then the right subtree. On a BST this yields values in sorted order.
+- **[Post-order](Data%20Structures/Trees/Traversal/DFS/PostOrder) (Left → Right → Root)**: Visit the left subtree, then the right subtree, then the current node. Useful for deleting a tree (children before parents) or evaluating postfix expressions.
+
+**Complexity analysis**
+
+- **Time complexity**: \(O(n)\); every node is visited once.
+- **Space complexity**: \(O(H)\), where \(H\) is the height of the tree. In the worst case (a skewed tree) this is \(O(n)\).
 
 ## Algorithm
 
