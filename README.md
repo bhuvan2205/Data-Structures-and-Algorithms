@@ -179,6 +179,34 @@ Queues are widely used in many real-world systems:
 - **Graph Algorithms**: Used in Breadth-First Search (BFS) traversal.
 - **Task Scheduling**: Handling asynchronous operations in event-driven systems.
 
+### [Graphs](Data%20Structures/Graphs)
+
+A graph is a versatile, non-linear data structure composed of a finite set of **vertices** (or nodes) connected by a set of **edges** (or links).
+
+![Types of Graph](assets/types-of-graph.png)
+
+**Key terminologies**
+
+- **Vertex (Node)**: An individual data element or object within the graph.
+- **Edge**: The connecting link, path, or line that joins two distinct vertices.
+
+**Common types of graphs**
+
+- **Directed Graph (Digraph)**: Edges have a specific direction, acting like one-way streets.
+- **Undirected Graph**: Edges have no direction and go both ways equally.
+- **Weighted Graph**: Edges carry a numerical value or weight, such as distance or cost.
+- **Unweighted Graph**: Edges represent connections only, with no numerical value.
+- **Sparse / Dense**: Sparse graphs have relatively few edges; dense graphs have many edges relative to the number of vertices.
+- **Acyclic / Cyclic**: Acyclic graphs have no path that returns to a starting vertex; cyclic graphs contain at least one cycle.
+- **Simple / Non-simple**: Simple graphs have no self-loops or multiple edges between the same pair of vertices; non-simple graphs may include both.
+- **Labeled / Unlabeled**: Labeled graphs assign identifiers to vertices; unlabeled graphs are defined purely by structure.
+
+**Real-world applications**
+
+- **Social Networks**: Used by platforms like LinkedIn to map professional connections and generate member recommendations.
+- **Navigation & Mapping**: Used by services like Google Maps to represent locations as vertices and roads as edges to calculate the fastest driving routes.
+- **Search Engine Indexing**: The internet is mapped as a massive directed graph where web pages are nodes and clickable hyperlinks are directed edges.
+- **Recommendation Engines**: Platforms like Netflix treat users and media titles as distinct vertices, building edges based on viewing history to suggest relevant new content.
 ### [Trees](Data%20Structures/Trees)
 
 A tree is a non-linear, hierarchical data structure consisting of nodes connected by edges. Unlike linear structures like arrays or linked lists, trees represent data in a branching, top-down fashion.
