@@ -207,6 +207,7 @@ A graph is a versatile, non-linear data structure composed of a finite set of **
 - **Navigation & Mapping**: Used by services like Google Maps to represent locations as vertices and roads as edges to calculate the fastest driving routes.
 - **Search Engine Indexing**: The internet is mapped as a massive directed graph where web pages are nodes and clickable hyperlinks are directed edges.
 - **Recommendation Engines**: Platforms like Netflix treat users and media titles as distinct vertices, building edges based on viewing history to suggest relevant new content.
+
 ### [Trees](Data%20Structures/Trees)
 
 A tree is a non-linear, hierarchical data structure consisting of nodes connected by edges. Unlike linear structures like arrays or linked lists, trees represent data in a branching, top-down fashion.
@@ -517,3 +518,37 @@ Return the digit at a specific position if it exists, otherwise return `0`.
 Get the maximum digit count from the array. For each digit position, create buckets (0–9) to store elements. Iterate over the elements and push each number into the corresponding bucket based on its current digit. Concatenate the buckets back into the array, and repeat for all digit positions. Finally, return the sorted array.
 
 - **Time Complexity**: \(O(n + k)\)
+
+---
+
+## Dynamic Programming
+
+Dynamic programming (DP) is an algorithmic optimization technique used to solve complex problems by breaking them down into simpler, overlapping subproblems and storing their solutions to avoid redundant calculations.
+
+### Classic Example: The Fibonacci Sequence
+
+If you calculate the 5th Fibonacci number using a naive recursive function, the execution tree looks like this:
+
+```
+          fib(5)
+        /        \
+    fib(4)        fib(3)
+   /      \      /     \
+fib(3)  fib(2) fib(2) fib(1)
+ /    \
+fib(2) fib(1)
+```
+
+Notice how `fib(3)` is calculated twice, and `fib(2)` is calculated three times. As the input number grows, this repetition creates massive performance bottlenecks. Dynamic programming saves the result of `fib(2)` and `fib(3)` the very first time they are calculated, cutting off all redundant branches of the tree.
+
+**[Naive recursion](Dynamic%20Programming/Fibonacci/index.js)**
+
+Each call branches into two more calls, so work grows exponentially with \(n\).
+
+- **Time Complexity**: \(O(2^n)\)
+
+**[Recursion with memoization](Dynamic%20Programming/Fibonacci/usingMemo.js)**
+
+Store each Fibonacci value the first time it is computed. Later calls reuse the stored result instead of recomputing the subtree.
+
+- **Time Complexity**: \(O(n)\)
