@@ -549,6 +549,18 @@ Each call branches into two more calls, so work grows exponentially with \(n\).
 
 **[Recursion with memoization](Dynamic%20Programming/Fibonacci/usingMemo.js)**
 
-Store each Fibonacci value the first time it is computed. Later calls reuse the stored result instead of recomputing the subtree.
+Store each Fibonacci value the first time it is computed. Later calls reuse the stored result instead of recomputing the subtree. This is **top-down** DP: start from `fib(n)` and recurse, filling a memo table as you go.
+
+- **Time Complexity**: \(O(n)\)
+
+**[Tabulation](Dynamic%20Programming/Fibonacci/usingTabulation.js)**
+
+Tabulation is **bottom-up** DP. Instead of starting at `fib(n)` and working down, you build an array of Fibonacci numbers from the base cases up to \(n\):
+
+1. Seed the table with the known base values (for example `[0, 1, 1]`).
+2. Loop from `3` to `n`. Each next value is the sum of the two previous table entries.
+3. Return the value at index \(n\).
+
+Every subproblem is solved once, in order, so there is no recursion and no overlapping work. Time is still linear; space is \(O(n)\) for the table (or \(O(1)\) if you only keep the last two numbers).
 
 - **Time Complexity**: \(O(n)\)
